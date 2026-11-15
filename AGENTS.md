@@ -1,6 +1,6 @@
 # Writing Skills Orchestration Guide
 
-This package includes **54 skills** and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
+This package includes **52 bundled skills**, **2 external companion skill pointers** (`turkce-humanizer`, `english-humanizer`), and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
 
 Choose one of the two primary workflows below based on the task.
 
@@ -23,8 +23,8 @@ Chain skills sequentially for long-form pieces; for shorter pieces you can skip 
    - Literary polish and rhythm: `beautiful-prose`
    - Reader-focused word choice free of LLM clichés: `llm-writing`
 3. **Humanization and AI-Pattern Removal (Humanizing)**
-   - English text: `avoid-ai-writing` / `english-humanizer`
-   - Turkish text: `turkce-humanizer`
+   - English text: `avoid-ai-writing`, or install external [`blader/humanizer`](https://github.com/blader/humanizer) (`skills/english-humanizer/SKILL.md`)
+   - Turkish text: install external [`bushrabeg/turkce-humanizer`](https://github.com/bushrabeg/turkce-humanizer) (`skills/turkce-humanizer/SKILL.md`)
    - Chinese text: `humanize-chinese`
    - Deterministic CLI post-processing: `unslop`
 4. **Editorial Review and Final Pass (Editing & Proofreading)**
@@ -54,9 +54,9 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 
 ---
 
-## Skill Inventory (54 Skills)
+## Skill Inventory (52 Bundled + 2 External Pointers)
 
-### Prose, Humanization & Editorial (18)
+### Prose, Humanization & Editorial (16 Bundled + 2 External)
 | Skill | Path | Purpose |
 |---|---|---|
 | `scientific-writing` | `skills/scientific-writing/SKILL.md` | Scientific and academic papers, citations, and objective prose. |
@@ -71,8 +71,8 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 | `llm-writing` | `skills/llm-writing/SKILL.md` | Deliberate word choice and reader-grounded phrasing without AI clichés. |
 | `avoid-ai-writing` | `skills/avoid-ai-writing/SKILL.md` | Stripping synthetic AI patterns from English drafts. |
 | `unslop` | `skills/unslop/SKILL.md` | Deterministic CLI post-processing (`unslop`) to clean AI patterns before publishing. |
-| `turkce-humanizer` | `skills/turkce-humanizer/SKILL.md` | Removing AI signatures and restoring natural Turkish prose rhythm. |
-| `english-humanizer` | `skills/english-humanizer/SKILL.md` | Rewriting English text to read naturally and humanly. |
+| `turkce-humanizer` | `skills/turkce-humanizer/SKILL.md` | External pointer -> install/clone [`bushrabeg/turkce-humanizer`](https://github.com/bushrabeg/turkce-humanizer) if missing locally. |
+| `english-humanizer` | `skills/english-humanizer/SKILL.md` | External pointer -> install/clone [`blader/humanizer`](https://github.com/blader/humanizer) if missing locally. |
 | `humanize-chinese` | `skills/humanize-chinese/SKILL.md` | AI-pattern detection, naturalization, and academic AIGC reduction in Chinese text. |
 | `copy-editing` | `skills/copy-editing/SKILL.md` | Paragraph flow, structural coherence, and editorial tightening. |
 | `professional-proofreader` | `skills/professional-proofreader/SKILL.md` | Final spelling, grammar, and punctuation inspection. |
@@ -124,5 +124,6 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 
 ## Boundaries
 
+- **External companion skills (`turkce-humanizer`, `english-humanizer`):** Do not treat the pointer files as full rulesets. When the user needs Turkish or English humanization from those skills, check whether they are installed locally; if not, install or clone from `https://github.com/bushrabeg/turkce-humanizer` or `https://github.com/blader/humanizer` first.
 - Match the target project's language and conventions; never inject uncanonical inventions into an existing Story Bible (`kb/` or `story.md`).
 - Never silently alter canon decisions in finalized (`final`) chapters without author confirmation.
