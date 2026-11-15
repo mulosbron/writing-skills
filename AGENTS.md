@@ -1,128 +1,128 @@
-# Writing Skills (Yazarlık & Kurgu Skilleri) Orkestrasyon Rehberi
+# Writing Skills Orchestration Guide
 
-Bu paket; **bilimsel/akademik, blog, metin yazarlığı, ortak belge ve editoryal düz yazı** (Türkçe/İngilizce/Çince) üretiminin yanı sıra, **uzun soluklu kurgu, roman, öykü, şiir, devamlılık (continuity) takibi ve yayıncılık** süreçleri için **54 skill** ve **10 kurgu alt-ajanı (`agents/`)** içerir.
+This package includes **54 skills** and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
 
-İhtiyaca göre aşağıdaki iki ana iş akışından birini seçin:
-
----
-
-## 🔄 İş Akışı A: Makale, Akademik, Deneme ve Düz Yazı
-
-Uzun metinlerde skilleri sırayla zincirleyin; kısa metinlerde 2. aşamayı atlayabilir veya 3. ile 4. aşamayı birleştirebilirsiniz.
-
-1. **Planlama ve İlk Taslak (Drafting)**
-   - Bilimsel/Akademik: `scientific-writing`
-   - Blog / Standart Makale: `blog-writing-guide`
-   - Deneme (Essay): `crossframe-essay`
-   - Genel İçerik: `content-writer-assistant`
-   - Dönüşüm Odaklı Metin / E-posta & Açılış Sayfası: `copywriting`
-   - Aşamalı Ortak Belge Yazımı (Spec / PRD / Teklif): `doc-coauthoring`
-   - Veri Anlatımı: `data-storytelling`
-   - Teknik / Açıklayıcı Wiki: `wiki-page-writer`
-2. **Üslup ve Akıcılık (Styling)**
-   - Edebi dokunuş: `beautiful-prose`
-   - LLM klişelerinden arındırılmış sade anlatım: `llm-writing`
-3. **İnsansılaştırma (Humanizing)**
-   - Türkçe metinler: `turkce-humanizer`
-   - İngilizce metinler: `avoid-ai-writing` / `english-humanizer`
-   - Çince metinler: `humanize-chinese`
-   - CLI tabanlı deterministik AI kalıbı temizliği: `unslop`
-4. **Editoryal Kontrol ve Son Okuma (Editing & Proofreading)**
-   - Yapı & akış: `copy-editing`
-   - Yazım, dilbilgisi ve noktalama: `professional-proofreader`
+Choose one of the two primary workflows below based on the task.
 
 ---
 
-## 📖 İş Akışı B: Kurgu, Öykü ve Roman (Creative Writing + Story Bible)
+## Workflow A: Articles, Academic Papers, Copy, and Non-Fiction Prose
 
-Kurgu projelerinde ihtiyaca göre **Muse / Craft iş akışı** (`creative-writing-*`, `story-*`) veya **Markdown Story Bible / CLI süreklilik iş akışı** (`story-init`, `story-maintenance`, `revision-continuity`, vb.) birlikte kullanılabilir:
+Chain skills sequentially for long-form pieces; for shorter pieces you can skip stage 2 or combine stages 3 and 4.
 
-1. **Kurulum ve Fikir Geliştirme**
-   - Proje & stil kurulumu: `project-setup` (kb/ ve stil dosyaları) veya `story-init` (YAML frontmatter tabanlı `story.md` / hikâye İncili)
-   - Fikir & öncül testi: `premise-workshop`, `creative-writing-muse`, `story-planning`
-   - Dünya & oyun kurgusu: `worldbuilding` (kurgu dünya, sihir/kültür/takvim/sözlük), `wordbuilding` (oyun dünyası kurgusu), `creative-research`, `research`
-2. **Yapı, Karakter ve Taslak Yazımı**
-   - Olay örgüsü, tema ve ses: `plot-structure`, `theme-craft`, `character-management`, `character-sim`, `voice-style`
-   - Sahne & bölüm yazımı: `story-workflow`, `creative-writing-craft`, `discovery-drafting`, `scene-craft`, `chapter-writing`, `verse-craft`, `interactive-fiction`, `genre-craft`
-   - Süreklilik & hafıza: `story-memory`, `series-continuity`, `story-maintenance`
-3. **Okuma, Eleştiri, Revizyon ve Yayın**
-   - Okuyucu & editoryal inceleme: `story-review`, `reader-sim`, `reader-panel`, `editorial-review`, `feedback-triage`, `writing-staffing`
-   - Çizgi/süreklilik revizyonu: `line-editing`, `revision-continuity`, `writing-principles`
-   - Çeviri/uyarlama & basım: `adaptation`, `submission`, `publishing`
-
-Kurgu alt-ajan rolleri (`agents/`): `muse`, `brainstormer`, `outliner`, `writer`, `style-creator`, `critic`, `continuity-checker`, `character-sim`, `reader-sim`, `creative-researcher`.
+1. **Planning and First Draft (Drafting)**
+   - Scientific / Academic: `scientific-writing`
+   - Blog / Standard Articles: `blog-writing-guide`
+   - Critical Essays: `crossframe-essay`
+   - General Long-Form Content: `content-writer-assistant`
+   - Conversion Marketing Copy (Landing Pages & Emails): `copywriting`
+   - Collaborative Specs / PRDs / Proposals / RFCs: `doc-coauthoring`
+   - Data Storytelling: `data-storytelling`
+   - Technical / Encyclopedic Wiki Pages: `wiki-page-writer`
+2. **Style and Flow (Styling)**
+   - Literary polish and rhythm: `beautiful-prose`
+   - Reader-focused word choice free of LLM clichés: `llm-writing`
+3. **Humanization and AI-Pattern Removal (Humanizing)**
+   - English text: `avoid-ai-writing` / `english-humanizer`
+   - Turkish text: `turkce-humanizer`
+   - Chinese text: `humanize-chinese`
+   - Deterministic CLI post-processing: `unslop`
+4. **Editorial Review and Final Pass (Editing & Proofreading)**
+   - Structure, flow, and consistency: `copy-editing`
+   - Spelling, grammar, and punctuation: `professional-proofreader`
 
 ---
 
-## 📚 Skill Envanteri (54 Skill)
+## Workflow B: Fiction, Short Stories, and Novels (Creative Writing + Story Bible)
 
-### Düz Yazı, İnsansılaştırma & Editörlük (18)
-| Skill | Yol | Amaç |
+Depending on project needs, combine the **Muse / Craft workflow** (`creative-writing-*`, `story-*`) with the **Markdown Story Bible / CLI continuity workflow** (`story-init`, `story-maintenance`, `revision-continuity`, etc.):
+
+1. **Setup and Premise Development**
+   - Project & style initialization: `project-setup` (`kb/` and style sheets) or `story-init` (YAML frontmatter `story.md` / Story Bible)
+   - Premise & ideation: `premise-workshop`, `creative-writing-muse`, `story-planning`
+   - Worldbuilding & research: `worldbuilding` (setting, magic/tech, cultures, calendars, naming), `wordbuilding` (interactive/game universes), `creative-research`, `research`
+2. **Structure, Character, and Drafting**
+   - Plot, theme, and voice: `plot-structure`, `theme-craft`, `character-management`, `character-sim`, `voice-style`
+   - Scene & chapter execution: `story-workflow`, `creative-writing-craft`, `discovery-drafting`, `scene-craft`, `chapter-writing`, `verse-craft`, `interactive-fiction`, `genre-craft`
+   - Memory & continuity: `story-memory`, `series-continuity`, `story-maintenance`
+3. **Reader Simulation, Critique, Revision, and Publishing**
+   - Reader & editorial feedback: `story-review`, `reader-sim`, `reader-panel`, `editorial-review`, `feedback-triage`, `writing-staffing`
+   - Line & continuity revision: `line-editing`, `revision-continuity`, `writing-principles`
+   - Adaptation, submission & release: `adaptation`, `submission`, `publishing`
+
+Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer`, `style-creator`, `critic`, `continuity-checker`, `character-sim`, `reader-sim`, `creative-researcher`.
+
+---
+
+## Skill Inventory (54 Skills)
+
+### Prose, Humanization & Editorial (18)
+| Skill | Path | Purpose |
 |---|---|---|
-| `scientific-writing` | `skills/scientific-writing/SKILL.md` | Bilimsel ve akademik yazılar, kaynakça ve nesnellik. |
-| `blog-writing-guide` | `skills/blog-writing-guide/SKILL.md` | Akıcı blog yazıları ve yapılandırılmış makaleler. |
-| `crossframe-essay` | `skills/crossframe-essay/SKILL.md` | Derinlikli, argüman sunan deneme (essay) yazımı. |
-| `data-storytelling` | `skills/data-storytelling/SKILL.md` | İstatistik ve verileri ikna edici anlatıya dönüştürme. |
-| `content-writer-assistant` | `skills/content-writer-assistant/SKILL.md` | Genel içerik ve metin yazarlığı asistanlığı. |
-| `copywriting` | `skills/copywriting/SKILL.md` | Açılış sayfaları ve e-postalar için uydurmasız, dönüşüm odaklı metin yazarlığı. |
-| `doc-coauthoring` | `skills/doc-coauthoring/SKILL.md` | Bağlam toplama, yinelemeli yapılandırma ve okur testi ile ortak belge yazımı. |
-| `wiki-page-writer` | `skills/wiki-page-writer/SKILL.md` | Nesnel wiki / ansiklopedi bilgi sayfaları. |
-| `beautiful-prose` | `skills/beautiful-prose/SKILL.md` | Edebi, akıcı ve zengin üslup geliştirme. |
-| `llm-writing` | `skills/llm-writing/SKILL.md` | Okur odaklı sade dil seçimi ve LLM kalıplarını temizleme. |
-| `avoid-ai-writing` | `skills/avoid-ai-writing/SKILL.md` | İngilizce metinleri yapay zeka klişelerinden arındırma. |
-| `unslop` | `skills/unslop/SKILL.md` | Yayın öncesi `unslop` CLI ile deterministik AI yazım kalıbı temizliği. |
-| `turkce-humanizer` | `skills/turkce-humanizer/SKILL.md` | Türkçe metinleri doğal ve yerel hale getirme. |
-| `english-humanizer` | `skills/english-humanizer/SKILL.md` | İngilizce metinleri insan eli değmiş gibi doğallaştırma. |
-| `humanize-chinese` | `skills/humanize-chinese/SKILL.md` | Çince metinlerde AI izi tespiti, doğallaştırma ve akademik AIGC azaltımı. |
-| `copy-editing` | `skills/copy-editing/SKILL.md` | Paragraf akışı, tutarlılık ve editoryal kurgu. |
-| `professional-proofreader` | `skills/professional-proofreader/SKILL.md` | Yazım, noktalama ve dilbilgisi son kontrolü. |
-| `wordbuilding` | `skills/wordbuilding/SKILL.md` | Oyun ve interaktif evrenler için dünya inşası metodolojisi. |
+| `scientific-writing` | `skills/scientific-writing/SKILL.md` | Scientific and academic papers, citations, and objective prose. |
+| `blog-writing-guide` | `skills/blog-writing-guide/SKILL.md` | Engaging blog posts and well-structured web articles. |
+| `crossframe-essay` | `skills/crossframe-essay/SKILL.md` | Argument-driven critical insight and long-form essay drafting. |
+| `data-storytelling` | `skills/data-storytelling/SKILL.md` | Turning statistics and analysis into persuasive narratives. |
+| `content-writer-assistant` | `skills/content-writer-assistant/SKILL.md` | Collaborative research, outlining, section feedback, and voice preservation. |
+| `copywriting` | `skills/copywriting/SKILL.md` | Conversion-focused landing page and email copy with strict no-fabrication rules. |
+| `doc-coauthoring` | `skills/doc-coauthoring/SKILL.md` | 3-stage collaborative document drafting (context, refinement, reader testing). |
+| `wiki-page-writer` | `skills/wiki-page-writer/SKILL.md` | Neutral, encyclopedic reference and wiki pages. |
+| `beautiful-prose` | `skills/beautiful-prose/SKILL.md` | Literary cadence, clarity, and expressive prose craft. |
+| `llm-writing` | `skills/llm-writing/SKILL.md` | Deliberate word choice and reader-grounded phrasing without AI clichés. |
+| `avoid-ai-writing` | `skills/avoid-ai-writing/SKILL.md` | Stripping synthetic AI patterns from English drafts. |
+| `unslop` | `skills/unslop/SKILL.md` | Deterministic CLI post-processing (`unslop`) to clean AI patterns before publishing. |
+| `turkce-humanizer` | `skills/turkce-humanizer/SKILL.md` | Removing AI signatures and restoring natural Turkish prose rhythm. |
+| `english-humanizer` | `skills/english-humanizer/SKILL.md` | Rewriting English text to read naturally and humanly. |
+| `humanize-chinese` | `skills/humanize-chinese/SKILL.md` | AI-pattern detection, naturalization, and academic AIGC reduction in Chinese text. |
+| `copy-editing` | `skills/copy-editing/SKILL.md` | Paragraph flow, structural coherence, and editorial tightening. |
+| `professional-proofreader` | `skills/professional-proofreader/SKILL.md` | Final spelling, grammar, and punctuation inspection. |
+| `wordbuilding` | `skills/wordbuilding/SKILL.md` | Worldbuilding methodology for games and interactive universes. |
 
-### Yaratıcı Yazarlık İş Akışı & Zanaat (12)
-| Skill | Yol | Amaç |
+### Creative Writing Workflow & Craft (12)
+| Skill | Path | Purpose |
 |---|---|---|
-| `creative-writing-muse` | `skills/creative-writing-muse/SKILL.md` | Hikâye geliştirme, yazma ve revizyonda ana yaratıcı ortak. |
-| `story-workflow` | `skills/story-workflow/SKILL.md` | Niyet okuma, üretim, eleştiri ve onay döngüsü orkestrasyonu. |
-| `project-setup` | `skills/project-setup/SKILL.md` | Hikâye projesi, `kb/` ve stil dosyaları ilk kurulumu. |
-| `story-planning` | `skills/story-planning/SKILL.md` | Beyin fırtınası, yaratıcı yönelim ve hikâye mimarisi. |
-| `story-memory` | `skills/story-memory/SKILL.md` | Gerçek/olay çıkarımı, bilgi tabanı düzeni ve süreklilik kaydı. |
-| `creative-writing-craft` | `skills/creative-writing-craft/SKILL.md` | Sahne mekaniği, düz yazı modları, stil analizi ve tür zanaatı. |
-| `creative-research` | `skills/creative-research/SKILL.md` | Tarihi, kültürel ve alana özgü kaynaklı kurgu araştırması. |
-| `character-sim` | `skills/character-sim/SKILL.md` | Karakterin sesi, bilgisi ve ruh haliyle rol/diyalog simülasyonu. |
-| `reader-sim` | `skills/reader-sim/SKILL.md` | İlk kez okuyan okur gözüyle anlık okuma tepkisi simülasyonu. |
-| `story-review` | `skills/story-review/SKILL.md` | Gelişimsel edit, çizgi editi, düzyazı eleştirisi ve süreklilik denetimi. |
-| `writing-principles` | `skills/writing-principles/SKILL.md` | Temel yazarlık ilkeleri, anti-kalıplar ve hata modları. |
-| `writing-staffing` | `skills/writing-staffing/SKILL.md` | Üretici ve inceleyici ajan görev dağılım rehberi. |
+| `creative-writing-muse` | `skills/creative-writing-muse/SKILL.md` | Primary creative partner for ideation, drafting, and revision. |
+| `story-workflow` | `skills/story-workflow/SKILL.md` | Intent parsing, drafting, critique, and approval loop orchestration. |
+| `project-setup` | `skills/project-setup/SKILL.md` | Initial setup for story projects, `kb/` memory, and style files. |
+| `story-planning` | `skills/story-planning/SKILL.md` | Brainstorming, creative direction, and story architecture. |
+| `story-memory` | `skills/story-memory/SKILL.md` | Fact extraction, knowledge-base layout, and continuity logging. |
+| `creative-writing-craft` | `skills/creative-writing-craft/SKILL.md` | Prose modes, scene mechanics, style analysis, and genre craft. |
+| `creative-research` | `skills/creative-research/SKILL.md` | Historical, cultural, and domain-grounded fiction research. |
+| `character-sim` | `skills/character-sim/SKILL.md` | Roleplay and dialogue simulation anchored to character voice and knowledge. |
+| `reader-sim` | `skills/reader-sim/SKILL.md` | First-time reader reaction simulation across chapters and beats. |
+| `story-review` | `skills/story-review/SKILL.md` | Developmental, line, prose critique, and continuity diagnostics. |
+| `writing-principles` | `skills/writing-principles/SKILL.md` | Core craft principles, anti-patterns, and failure-mode checks. |
+| `writing-staffing` | `skills/writing-staffing/SKILL.md` | Producer vs. reviewer sub-agent staffing and delegation guide. |
 
-### Kurgu Mühendisliği, Hikâye İncili & Yayıncılık (24)
-| Skill | Yol | Amaç |
+### Fiction Engineering, Story Bible & Publishing (24)
+| Skill | Path | Purpose |
 |---|---|---|
-| `story-init` | `skills/story-init/SKILL.md` | Markdown + YAML frontmatter tabanlı hikâye projesi başlatma. |
-| `premise-workshop` | `skills/premise-workshop/SKILL.md` | Hikâye fikri, biçim seçimi, logline ve premise testi. |
-| `worldbuilding` | `skills/worldbuilding/SKILL.md` | Mekân, sihir/teknoloji, kültür, takvim ve isim dili inşası. |
-| `character-management` | `skills/character-management/SKILL.md` | Karakter profilleri, ilişkiler, arc ve karakter durum takibi. |
-| `plot-structure` | `skills/plot-structure/SKILL.md` | Olay örgüsü, MICE iplikleri, kısa öykü ve tempo planlama. |
-| `theme-craft` | `skills/theme-craft/SKILL.md` | Tema, ana fikir, yalan/gerçek ve antagonist tematik ekseni. |
-| `voice-style` | `skills/voice-style/SKILL.md` | Stil kılavuzu, ses parmak izi ve dil tutarlılığı kuralları. |
-| `genre-craft` | `skills/genre-craft/SKILL.md` | Türlere özgü kurgu kuralları (gizem ipuçları, seri/bölümlü kurgu vb.). |
-| `scene-craft` | `skills/scene-craft/SKILL.md` | Sahne amacı, çatışma, dönüm noktası ve geçiş kurgusu. |
-| `chapter-writing` | `skills/chapter-writing/SKILL.md` | Sahne planlarından bölüm taslağı üretme rehberi. |
-| `discovery-drafting` | `skills/discovery-drafting/SKILL.md` | Katı taslak olmadan keşifsel (pantsing) yazım ve sahne keşfi. |
-| `verse-craft` | `skills/verse-craft/SKILL.md` | Şiir, vezin/ritim taraması, kafiye ve şarkı sözü yazımı. |
-| `interactive-fiction` | `skills/interactive-fiction/SKILL.md` | Dallanan anlatı ve interaktif kurgu tasarımı. |
-| `research` | `skills/research/SKILL.md` | Gerçek dünya doğrulamaları, uzman notları ve bölüm bağlantıları. |
-| `revision-continuity` | `skills/revision-continuity/SKILL.md` | Ölü karakter, zaman çizelgesi ve kurulum-karşılık süreklilik kontrolü. |
-| `line-editing` | `skills/line-editing/SKILL.md` | Cümle ritmi, diyalog sesi ve satır düzeyinde inceltme. |
-| `reader-panel` | `skills/reader-panel/SKILL.md` | Çoklu beta-okur paneli ve perspektif raporlaması. |
-| `feedback-triage` | `skills/feedback-triage/SKILL.md` | Okur/editör geri bildirimlerini sınıflandırma ve revizyon planlama (`templates/`). |
-| `editorial-review` | `skills/editorial-review/SKILL.md` | İzinler, işbirliği ve editoryal inceleme süreçleri (`templates/`). |
-| `series-continuity` | `skills/series-continuity/SKILL.md` | Çok kitaplı serilerde seri İncili ve süreklilik yönetimi. |
-| `adaptation` | `skills/adaptation/SKILL.md` | Çeviri, resimli kitap ve ortam uyarlama teknikleri. |
-| `story-maintenance` | `skills/story-maintenance/SKILL.md` | Story CLI doğrulama, indeks onarımı, dışa aktarım ve diyagram üretimi. |
-| `submission` | `skills/submission/SKILL.md` | Sorgu mektubu (query), tanıtım yazısı (blurb) ve dergi/ajans başvuruları. |
-| `publishing` | `skills/publishing/SKILL.md` | Bağımsız yayıncılık üretimi, meta veri ve hak anlaşmaları. |
+| `story-init` | `skills/story-init/SKILL.md` | Initializing Markdown + YAML frontmatter Story Bible projects. |
+| `premise-workshop` | `skills/premise-workshop/SKILL.md` | Premise testing, format selection, and logline refinement. |
+| `worldbuilding` | `skills/worldbuilding/SKILL.md` | Setting, magic/tech systems, cultures, calendars, and naming languages. |
+| `character-management` | `skills/character-management/SKILL.md` | Character sheets, relationships, arcs, and state tracking. |
+| `plot-structure` | `skills/plot-structure/SKILL.md` | Plotting, MICE threads, short fiction structure, and pacing. |
+| `theme-craft` | `skills/theme-craft/SKILL.md` | Controlling idea, lie/truth arcs, and thematic antagonist design. |
+| `voice-style` | `skills/voice-style/SKILL.md` | Style sheets, voice fingerprints, and prose consistency checks. |
+| `genre-craft` | `skills/genre-craft/SKILL.md` | Genre conventions (mystery clues, serials, genre promises). |
+| `scene-craft` | `skills/scene-craft/SKILL.md` | Scene goals, conflict, turning points, and transitions. |
+| `chapter-writing` | `skills/chapter-writing/SKILL.md` | Turning scene outlines into full chapter drafts. |
+| `discovery-drafting` | `skills/discovery-drafting/SKILL.md` | Exploratory (pantsing) drafting and kernel reconciliation. |
+| `verse-craft` | `skills/verse-craft/SKILL.md` | Poetry, meter/scansion, rhyme schemes, and lyric craft. |
+| `interactive-fiction` | `skills/interactive-fiction/SKILL.md` | Branching narrative and choice architecture design. |
+| `research` | `skills/research/SKILL.md` | Real-world verification notes linked to story chapters. |
+| `revision-continuity` | `skills/revision-continuity/SKILL.md` | Dead-character, timeline, and setup/payoff continuity auditing. |
+| `line-editing` | `skills/line-editing/SKILL.md` | Sentence rhythm, dialogue cadence, and line-level tightening. |
+| `reader-panel` | `skills/reader-panel/SKILL.md` | Multi-persona beta-reader feedback panels and reporting. |
+| `feedback-triage` | `skills/feedback-triage/SKILL.md` | Classifying reader/editor notes into actionable revision plans. |
+| `editorial-review` | `skills/editorial-review/SKILL.md` | Permissions, collaboration workflows, and editorial rounds. |
+| `series-continuity` | `skills/series-continuity/SKILL.md` | Multi-book series bible and cross-volume continuity management. |
+| `adaptation` | `skills/adaptation/SKILL.md` | Translation, audiobook, comics/screenplay, and format adaptation. |
+| `story-maintenance` | `skills/story-maintenance/SKILL.md` | Story CLI validation, index repair, export, and plot diagrams. |
+| `submission` | `skills/submission/SKILL.md` | Query letters, blurbs, comp titles, and market/agent submissions. |
+| `publishing` | `skills/publishing/SKILL.md` | Indie production, metadata, accessibility, and rights checklists. |
 
-## Sınırlar
+## Boundaries
 
-- Okunacak/yazılacak dosyaların kendi diline ve proje konvansiyonlarına uyun; Türkçe metinlere İngilizce kalıp, mevcut bir hikâye İncili'ne (`kb/` veya `story.md`) uymayan kanon icadı eklemeyin.
-- Yazar onaylamadan yayımlanmış/kesinleşmiş (`final`) bölümlerin kanon kararlarını sessizce değiştirmeyin.
+- Match the target project's language and conventions; never inject uncanonical inventions into an existing Story Bible (`kb/` or `story.md`).
+- Never silently alter canon decisions in finalized (`final`) chapters without author confirmation.
