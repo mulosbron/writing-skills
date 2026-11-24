@@ -1,0 +1,42 @@
+{
+  "world": "Ash Coasts (sample data)",
+  "answers": {
+    "1": {
+      "rivers": {"status": "yes", "note": "Ash River descends from North Ridge and merges three tributaries at Forkflat."},
+      "mountains": {"status": "partial", "note": "Ridge exists, but rain shadow is missing; southern slope has identical climate."},
+      "cities": {"status": "yes", "note": "All three major towns sit along the old river trade road."},
+      "climate": {"status": "no", "note": ""},
+      "own_rules": {"status": "yes", "note": "Ash Season arrives every twelve years; local history tracks those cycles."}
+    },
+    "2": {
+      "striking_elements": {"status": "yes", "note": "The Undying Lighthouse and the buried first city under the ash."},
+      "defines_identity": {"status": "partial", "note": "Lighthouse is strong; the rest lacks a unified tone."},
+      "depth_illusion": {"status": "yes", "note": "Was considering adding another ancient war to the Age of Ashes."},
+      "structural_gaps": {"status": "yes", "note": "If nobody can go outside during Ash Season, how does farming survive? Unanswered."}
+    },
+    "3": {
+      "naming": {"status": "yes", "note": "Coastal towns use two syllables ending in hard stops (Gravelbay, Ironcrag)."},
+      "visual_consistency": {"status": "yes", "note": "Lantern keepers wear copper, grey wool, and carry wick lamps."},
+      "silhouette": {"status": "yes", "note": "Beaked ash-mask and burlap cloak are unmistakable from afar."},
+      "core_anchor": {"status": "partial", "note": "Only defined for Lantern Keepers; inland farmers remain generic."},
+      "planet_of_hats": {"status": "no", "note": ""}
+    },
+    "4": {
+      "power_rules": {"status": "partial", "note": "Ash-calling only works in lantern light; exact cost is still vague."},
+      "daily_life": {"status": "no", "note": ""},
+      "political_authority": {"status": "no", "note": ""},
+      "warfare": {"status": "no", "note": ""},
+      "tech_constraints": {"status": "no", "note": ""},
+      "power_destabilization": {"status": "no", "note": "Power scale is already kept small."}
+    },
+    "5": {
+      "beliefs_debates": {"status": "yes", "note": "Lantern oil is sacred, yet one starving fishing village cooks with it."},
+      "tradition_origins": {"status": "yes", "note": "Masks began as smoke protection in the first city; nobody remembers why anymore."},
+      "history_ripples": {"status": "partial", "note": "The first city fell, but borders and trade routes show no trace of it."},
+      "continuity": {"status": "yes", "note": "Coastal towns remain bound in debt by the Lantern Oath."},
+      "internal_contradiction": {"status": "yes", "note": "Mountain villages pay tax to the Lighthouse but refuse to swear by lantern light."},
+      "plural_narratives": {"status": "partial", "note": "Only Lighthouse chronicles exist so far."},
+      "place_names": {"status": "na", "note": "Etymology of place names is out of scope for this project."}
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "skill_name": "wordbuilding",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate and profile my setting in world.md. I'm using it for a D&D campaign and don't know whether it actually feels deep yet. I'm mostly curious about infrastructure and institutions (Level 6)—should I start there?",
+      "expected_output": "Completed 36-question JSON, 7-level profile, risk flags surfaced, and recommendation to patch the weakest level before diving into Level 6.",
+      "files": [
+        "evals/files/world.md"
+      ],
+      "expectations": [
+        "All 36 questions are populated with valid statuses (yes, partial, no, na) and scripts/world_levels.py runs cleanly",
+        "Risk items are not hidden: depth_illusion and structural_gaps appear in the response",
+        "All seven level scores and the highest strong level are reported",
+        "The Level 6 question is answered directly, noting Level 6 is deeper than most campaigns need",
+        "One concrete next step is recommended starting from an item in the weakest level",
+        "No missing details (era specifics, god names) are fabricated beyond what is in world.md",
+        "Response is written in English and saved to outputs/response.md"
+      ]
+    }
+  ]
+}

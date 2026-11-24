@@ -1,6 +1,6 @@
 # Writing Skills Orchestration Guide
 
-This package includes **52 bundled skills**, **2 external companion skill pointers** (`turkce-humanizer`, `english-humanizer`), and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
+This package includes **53 bundled skills**, **2 external companion skill pointers** (`turkce-humanizer`, `english-humanizer`), and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
 
 Choose one of the two primary workflows below based on the task.
 
@@ -40,7 +40,7 @@ Depending on project needs, combine the **Muse / Craft workflow** (`creative-wri
 1. **Setup and Premise Development**
    - Project & style initialization: `project-setup` (`kb/` and style sheets) or `story-init` (YAML frontmatter `story.md` / Story Bible)
    - Premise & ideation: `premise-workshop`, `creative-writing-muse`, `story-planning`
-   - Worldbuilding & research: `worldbuilding` (setting, magic/tech, cultures, calendars, naming), `wordbuilding` (interactive/game universes), `creative-research`, `research`
+   - Worldbuilding & research: `worldbuilding` (setting, magic/tech, cultures, calendars, naming), `wordbuilding` (interactive/game universes), `world-texture` (10 lived-in micro-details + perspective lenses), `creative-research`, `research`
 2. **Structure, Character, and Drafting**
    - Plot, theme, and voice: `plot-structure`, `theme-craft`, `character-management`, `character-sim`, `voice-style`
    - Scene & chapter execution: `story-workflow`, `creative-writing-craft`, `discovery-drafting`, `scene-craft`, `chapter-writing`, `verse-craft`, `interactive-fiction`, `genre-craft`
@@ -54,9 +54,9 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 
 ---
 
-## Skill Inventory (52 Bundled + 2 External Pointers)
+## Skill Inventory (53 Bundled + 2 External Pointers)
 
-### Prose, Humanization & Editorial (16 Bundled + 2 External)
+### Prose, Humanization & Editorial (17 Bundled + 2 External)
 | Skill | Path | Purpose |
 |---|---|---|
 | `scientific-writing` | `skills/scientific-writing/SKILL.md` | Scientific and academic papers, citations, and objective prose. |
@@ -76,7 +76,8 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 | `humanize-chinese` | `skills/humanize-chinese/SKILL.md` | AI-pattern detection, naturalization, and academic AIGC reduction in Chinese text. |
 | `copy-editing` | `skills/copy-editing/SKILL.md` | Paragraph flow, structural coherence, and editorial tightening. |
 | `professional-proofreader` | `skills/professional-proofreader/SKILL.md` | Final spelling, grammar, and punctuation inspection. |
-| `wordbuilding` | `skills/wordbuilding/SKILL.md` | Worldbuilding methodology for games and interactive universes. |
+| `wordbuilding` | `skills/wordbuilding/SKILL.md` | Game worldbuilding methodology and deterministic 36-question 7-level profiler (`scripts/world_levels.py`). |
+| `world-texture` | `skills/world-texture/SKILL.md` | 10 lived-in micro-worldbuilding details, perspective lenses, and Locale Texture Card auditor (`scripts/locale_texture.py`). |
 
 ### Creative Writing Workflow & Craft (12)
 | Skill | Path | Purpose |

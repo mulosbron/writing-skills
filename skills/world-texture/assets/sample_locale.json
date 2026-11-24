@@ -1,0 +1,58 @@
+{
+  "locale": "Cinderport (sample data)",
+  "region": "Ash Coasts",
+  "education_lens": "Scholars recognize the Old Kiln script on the seawall; dockworkers only know the pier names.",
+  "lifespan_lens": "Humans treat the Cinder War as grandfathers' tales; local stone-dwarves still hold grudges from it.",
+  "details": {
+    "local_sayings": {
+      "status": "present",
+      "detail": "'Keep your boots dry and your wick lit'—used both as a farewell and a warning against cutting corners.",
+      "hook": "Merchants distrust anyone who replies without tapping their belt lantern."
+    },
+    "regional_superstitions": {
+      "status": "present",
+      "detail": "Never whistle on the outer pier after dusk; locals swear the tide-hounds follow the tune.",
+      "hook": ""
+    },
+    "seasonal_festivals": {
+      "status": "sketch",
+      "detail": "Night of First Embers—lantern boats launched onto the bay each autumn.",
+      "hook": "Pickpockets and smugglers use the smoke cover."
+    },
+    "famous_monuments": {
+      "status": "present",
+      "detail": "Twin basalt lighthouse pillars jutting half-collapsed out of the harbor mouth.",
+      "hook": "Low tide exposes an interior spiral stair."
+    },
+    "war_memorials": {
+      "status": "absent",
+      "detail": "",
+      "hook": ""
+    },
+    "scarred_landscapes": {
+      "status": "present",
+      "detail": "The Glass Flats north of town where wildfire and kiln-blast fused the beach sand.",
+      "hook": "Scavengers harvest sharp obsidian shards at dawn."
+    },
+    "unique_animals": {
+      "status": "absent",
+      "detail": "",
+      "hook": ""
+    },
+    "rival_families": {
+      "status": "present",
+      "detail": "House Vane and House Corrin dispute ownership of the east salt-drying piers.",
+      "hook": "Both secretly hire outsiders to sabotage the other's drying racks."
+    },
+    "local_heroes": {
+      "status": "sketch",
+      "detail": "Old Mara, the ferrywoman who rowed thirty children through a burning squall.",
+      "hook": ""
+    },
+    "famous_orders": {
+      "status": "na",
+      "detail": "Out of scope for this small fishing harbor.",
+      "hook": ""
+    }
+  }
+}

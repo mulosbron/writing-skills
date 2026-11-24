@@ -1,14 +1,6 @@
 ---
-name: worldbuilding
-description: >
-  Game-development worldbuilding methodology for LLMs. Use when designing
-  fictional settings for video games (RPGs, open worlds, adventures, TTRPG
-  campaigns, live-service games), generating lore, quests, factions, maps,
-  or when auditing an existing game world for depth and coherence.
-  Synthesized from professional worldbuilding analysis: Pixar's premise
-  method, the seven levels of worldbuilding, height-fall-shadow structure,
-  environmental storytelling ("moldy worlds"), and the seven deadly sins
-  of worldbuilding.
+name: wordbuilding
+description: Game-development worldbuilding methodology for LLMs with a deterministic 36-question 7-level profiler. Use when designing fictional settings for games or campaigns, generating lore, factions, or maps, or auditing an existing world for depth and coherence via Pixar's premise method, the seven levels of worldbuilding, height-fall-shadow structure, and the seven deadly sins.
 ---
 
 # Worldbuilding Skill (Game Development)
@@ -139,6 +131,26 @@ Use as a diagnostic: identify the level of an existing world, then target the ne
 6. **Infrastructure & Institutions** — Banking, logistics, supply. The machinery runs without protagonists.
 7. **Generative World** — Structurally sound; the world produces stories on demand at any zoom level.
 
+### Deterministic 7-Level Profiler (`scripts/world_levels.py`)
+
+Run commands from this skill's directory (`skills/wordbuilding/`):
+
+| Situation | Command / Reference |
+|---|---|
+| Review detailed level definitions & video examples | Read `references/seven_levels.md` |
+| Generate blank 36-question checklist (all levels or one) | `python scripts/world_levels.py checklist [--level 4]` |
+| Score a completed world profile | `python scripts/world_levels.py evaluate world.json --json result.json --output profile.md` |
+| Preview output on sample data ("Ash Coasts") | `python scripts/world_levels.py evaluate assets/sample_world.json` |
+
+**Scoring & workflow rules:**
+- Valid answers are `yes` (2), `partial` (1), `no` (0), and `na` (excluded—use `na` only when a question truly does not apply, e.g., continent maps in a single-city story).
+- Four questions have `direction: "risk"` (inverted scoring: `yes` triggers a risk warning). Never hide these.
+- A level is `strong` at `>= 80` with zero `0`-point items, `weak` at `< 50`, and `partial` in between. These numeric thresholds and 2/1/0 points are the profiler's own comparison scale, not rigid rules from the source analysis.
+- **Open questions below your highest strong level** are the primary finding—patch lower-level foundations before pushing deeper, and only recommend Level 6 when a project actually needs institutional depth.
+- Apply three diagnostic questions to any world element (city, guild, religion): *Why is it here? Who benefits from it? What happens if this changes?* If you cannot answer all three, score it `partial`.
+- Verify claims against the actual world document/map before marking `yes`; if a document omits something, mark `no` or `na` with `note: "not in document"`.
+- Run `python -m unittest tests/test_world_levels.py` after editing `scripts/world_levels.py`.
+
 ---
 
 ## Part 4 — Anti-Patterns: The Seven Deadly Sins (Game Edition)
@@ -210,4 +222,4 @@ Run the relevant audit before committing content. Any "no" points at the phase t
 9. Which 2–3 things are extreme on purpose — and what stays moderate?
 10. If I stopped writing now, would this world still generate stories?
 
-**Remember:** Build the world to break, scar, and keep turning without you. Leave questions unanswered. Let players dig. Every relic is a story, every ruin is a question, and every answer they find should feel like survival — not homework.
+**Remember:** Build the world to break, scar, and keep turning without you. Leave questions unanswered. Let players dig. Every relic is a story, every ruin is a question, and every answer they find should feel like survival — not homework. For fast, lived-in micro-details on any specific town or locale, pair with [`../world-texture/SKILL.md`](../world-texture/SKILL.md).
