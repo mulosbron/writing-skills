@@ -20,3 +20,11 @@ npx skills add bushrabeg/turkce-humanizer
 ```
 
 Once fetched, follow the upstream `SKILL.md` (which is written in Turkish and enforces TDK punctuation, Turkish prose rhythm, and register-aware two-phase humanization).
+
+## Bundled CLI Scanner (`scripts/signal_scanner.py`)
+
+This repo bundles the companion Turkish AI-signature density scanner so you can audit Turkish text immediately (reports dominant/secondary AI signals and signals per 100 words):
+
+```bash
+python scripts/signal_scanner.py draft.md --json
+```
