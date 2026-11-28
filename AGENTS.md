@@ -1,6 +1,6 @@
 # Writing Skills Orchestration Guide
 
-This package includes **53 bundled skills**, **2 external companion skill pointers** (`turkce-humanizer`, `english-humanizer`), and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
+This package includes **59 bundled skills**, **2 external companion skill pointers** (`turkce-humanizer`, `english-humanizer`), and **10 fiction sub-agents (`agents/`)** for **scientific/academic writing, blogs, essays, copywriting, collaborative docs, multilingual humanization** (`TR`/`EN`/`ZH`), as well as **long-form fiction, novels, short stories, verse, continuity tracking, and publishing**.
 
 Choose one of the two primary workflows below based on the task.
 
@@ -122,6 +122,12 @@ Fiction sub-agent roles (`agents/`): `muse`, `brainstormer`, `outliner`, `writer
 | `story-maintenance` | `skills/story-maintenance/SKILL.md` | Story CLI validation, index repair, export, and plot diagrams. |
 | `submission` | `skills/submission/SKILL.md` | Query letters, blurbs, comp titles, and market/agent submissions. |
 | `publishing` | `skills/publishing/SKILL.md` | Indie production, metadata, accessibility, and rights checklists. |
+| `video-script-prep` | `skills/video-script-prep/SKILL.md` | Spoken-English video script formatting with inline jargon definitions and a signature close. |
+| `x-twitter-viral-engine` | `skills/x-twitter-viral-engine/SKILL.md` | Self-iterating X/Twitter post generator from top-10% hooks (`scripts/hook_feedback_loop.py`, hook tracker). |
+| `limited-time-promo-generator` | `skills/limited-time-promo-generator/SKILL.md` | Limited-time offer campaigns with bonus stacks for Skool, LinkedIn, YouTube Community and X. |
+| `livestream-mega-guide` | `skills/livestream-mega-guide/SKILL.md` | 6,000-word livestream script, Hook-Story-Offer, 30-day plan, promo posts and 100 prompts (`scripts/transcript_to_prompts.py`). |
+| `business-advisor-debate` | `skills/business-advisor-debate/SKILL.md` | Structured debate between two business thinkers ending in a synthesized action plan. |
+| `thirty-day-constraint-solver` | `skills/thirty-day-constraint-solver/SKILL.md` | Business bottleneck -> 30-day input/output plan with Target/Actual/Gap tracker (`scripts/generate_30day_tracker.py`). |
 
 ## Boundaries
 
